@@ -79,5 +79,5 @@ jobs:
           app-name: 'Arunyubikey'
           slot-name: 'Production'
           package: .
-          clean: false
+          clean: true
           
