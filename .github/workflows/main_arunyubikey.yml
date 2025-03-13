@@ -56,7 +56,7 @@ jobs:
       - name: Zip extract
         uses: hoatruongdev09/extract-zip-github-action@v1.2
         with:
-         input-path: .net-app.zip
+         input-path: $GITHUB_WORKSPACE
          output-path: netapp
           
       
@@ -73,5 +73,5 @@ jobs:
         with:
           app-name: 'Arunyubikey'
           slot-name: 'Production'
-          package: .netapp
+          package: netapp
           
