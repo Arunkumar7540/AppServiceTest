@@ -29,7 +29,15 @@ jobs:
 
       - name: dotnet publish
         working-directory: source/dotnet5
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp" --zip
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+
+      - name: Create Archive
+        uses: ksm2/archive-action@v1
+        with:
+          # The directory to archive from
+          root-directory: ${{env.DOTNET_ROOT}}/myapp        
+          # Name for the archive
+          name: netapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
