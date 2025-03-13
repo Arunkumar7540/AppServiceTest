@@ -53,11 +53,9 @@ jobs:
         with:
           name: .net-app
           
-      - name: extract-7z-action
-        uses: DuckSoft/extract-7z-action@v1.0
-        with:
-         pathSource: .net-app.zip
-         pathTarget: netapp
+      - name: Extract ZIP file
+        run: |
+         unzip .net-app.zip -d ./netapp
           
       
       - name: Login to Azure
@@ -73,5 +71,5 @@ jobs:
         with:
           app-name: 'Arunyubikey'
           slot-name: 'Production'
-          package: netapp
+          package: ./netapp
           
