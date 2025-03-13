@@ -55,12 +55,7 @@ jobs:
           
       - name: Extract ZIP file
         run: |
-         dir  
-         
-      - name: Extract ZIP file
-        run: |
-         unzip .net-app.zip -d ./netapp
-          
+         dir           
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -75,5 +70,5 @@ jobs:
         with:
           app-name: 'Arunyubikey'
           slot-name: 'Production'
-          package: ./netapp
+          package: .
           
