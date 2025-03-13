@@ -56,8 +56,8 @@ jobs:
       - name: extract-7z-action
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-         pathSource: D:\a\AppServiceTest\AppServiceTest\.net-app.zip
-         pathTarget: D:\a\AppServiceTest\AppServiceTest\netapp
+         pathSource: .net-app.zip
+         pathTarget: netapp
           
       
       - name: Login to Azure
