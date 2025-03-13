@@ -53,11 +53,11 @@ jobs:
         with:
           name: .net-app
           
-      - name: Zip extract
-        uses: hoatruongdev09/extract-zip-github-action@v1.2
+      - name: extract-7z-action
+        uses: DuckSoft/extract-7z-action@v1.0
         with:
-         input-path: D:\a\AppServiceTest\AppServiceTest
-         output-path: D:\a\AppServiceTest\AppServiceTest\netapp
+         pathSource: D:\a\AppServiceTest\AppServiceTest\.net-app.zip
+         pathTarget: D:\a\AppServiceTest\AppServiceTest\netapp
           
       
       - name: Login to Azure
