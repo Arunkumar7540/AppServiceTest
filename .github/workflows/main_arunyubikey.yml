@@ -57,7 +57,7 @@ jobs:
         uses: hoatruongdev09/extract-zip-github-action@v1.2
         with:
          input-path: .
-         output-path: .netapp
+         output-path: netapp
           
       
       - name: Login to Azure
