@@ -55,6 +55,10 @@ jobs:
           
       - name: Extract ZIP file
         run: |
+         dir  
+         
+      - name: Extract ZIP file
+        run: |
          unzip .net-app.zip -d ./netapp
           
       
